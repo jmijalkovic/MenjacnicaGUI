@@ -70,4 +70,8 @@ public class GUIKontroler {
 		obrisi.setVisible(true);
 	}
 
+	public static void napraviIzvrsiZamenu() {
+		IzvrsiZamenuGUI zamena = new IzvrsiZamenuGUI();
+		zamena.setVisible(true);
+	}
 }
