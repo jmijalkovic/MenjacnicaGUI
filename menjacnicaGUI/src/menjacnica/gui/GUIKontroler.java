@@ -65,4 +65,9 @@ public class GUIKontroler {
 		menjacnicaGUI.ispis(poruka);
 	}
 
+	public static void napraviObrisiKurs() {
+		ObrisiKursGUI obrisi = new ObrisiKursGUI();
+		obrisi.setVisible(true);
+	}
+
 }
