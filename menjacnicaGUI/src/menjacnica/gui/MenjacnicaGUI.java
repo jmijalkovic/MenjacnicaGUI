@@ -54,7 +54,6 @@ public class MenjacnicaGUI extends JFrame {
 	 * Launch the application.
 	 */
 
-
 	/**
 	 * Create the frame.
 	 */
@@ -103,11 +102,11 @@ public class MenjacnicaGUI extends JFrame {
 	private JMenuItem getMntmOpen() {
 		if (mntmOpen == null) {
 			mntmOpen = new JMenuItem("Open");
- 			mntmOpen.addActionListener(new ActionListener() {
- 				public void actionPerformed(ActionEvent e) {
- 					GUIKontroler.otvoriFajl();
- 				}
- 			});
+			mntmOpen.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e) {
+					GUIKontroler.otvoriFajl();
+				}
+			});
 			mntmOpen.setIcon(new ImageIcon(MenjacnicaGUI.class.getResource("/icons/open-folder-with-document.png")));
 			mntmOpen.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_O, InputEvent.CTRL_MASK));
 		}
@@ -118,10 +117,10 @@ public class MenjacnicaGUI extends JFrame {
 		if (mntmSave == null) {
 			mntmSave = new JMenuItem("Save");
 			mntmSave.addActionListener(new ActionListener() {
- 				public void actionPerformed(ActionEvent e) {
- 					GUIKontroler.sacuvajFajl();
- 				}
- 			});
+				public void actionPerformed(ActionEvent e) {
+					GUIKontroler.sacuvajFajl();
+				}
+			});
 			mntmSave.setIcon(new ImageIcon(MenjacnicaGUI.class.getResource("/icons/save.png")));
 			mntmSave.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_S, InputEvent.CTRL_MASK));
 		}
@@ -131,11 +130,11 @@ public class MenjacnicaGUI extends JFrame {
 	private JMenuItem getMntmExit() {
 		if (mntmExit == null) {
 			mntmExit = new JMenuItem("Exit");
- 			mntmExit.addActionListener(new ActionListener() {
- 				public void actionPerformed(ActionEvent e) {
- 					GUIKontroler.ugasiAplikaciju();
- 				}
- 			});
+			mntmExit.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e) {
+					GUIKontroler.ugasiAplikaciju();
+				}
+			});
 			mntmExit.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_X, InputEvent.ALT_MASK));
 		}
 		return mntmExit;
@@ -144,11 +143,11 @@ public class MenjacnicaGUI extends JFrame {
 	private JMenuItem getMntmAbout() {
 		if (mntmAbout == null) {
 			mntmAbout = new JMenuItem("About");
- 			mntmAbout.addActionListener(new ActionListener() {
- 				public void actionPerformed(ActionEvent e) {
- 					GUIKontroler.podaciOAutoru();
- 				}
- 			});
+			mntmAbout.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e) {
+					GUIKontroler.podaciOAutoru();
+				}
+			});
 		}
 		return mntmAbout;
 	}
@@ -168,6 +167,11 @@ public class MenjacnicaGUI extends JFrame {
 	private JButton getBtnDodajKurs() {
 		if (btnDodajKurs == null) {
 			btnDodajKurs = new JButton("Dodaj kurs");
+			btnDodajKurs.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e) {
+					GUIKontroler.napraviDodajKurs();
+				}
+			});
 			btnDodajKurs.setBounds(10, 5, 120, 23);
 		}
 		return btnDodajKurs;
@@ -230,10 +234,10 @@ public class MenjacnicaGUI extends JFrame {
 		}
 		return table;
 	}
-	
- 	public void ispis(String ispis){
-	 		textArea.setText(textArea.getText()+" "+ispis);
-	 	}
+
+	public void ispis(String ispis) {
+		textArea.setText(textArea.getText() + " " + ispis);
+	}
 
 	private static void addPopup(Component component, final JPopupMenu popup) {
 		component.addMouseListener(new MouseAdapter() {
@@ -268,6 +272,11 @@ public class MenjacnicaGUI extends JFrame {
 	private JMenuItem getMntmDodajKurs() {
 		if (mntmDodajKurs == null) {
 			mntmDodajKurs = new JMenuItem("Dodaj kurs");
+			mntmDodajKurs.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e) {
+					GUIKontroler.napraviDodajKurs();
+				}
+			});
 		}
 		return mntmDodajKurs;
 	}
