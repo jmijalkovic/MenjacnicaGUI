@@ -16,6 +16,7 @@ public class GUIKontroler {
 				try {
 					menjacnicaGUI = new MenjacnicaGUI();
 					menjacnicaGUI.setVisible(true);
+					menjacnicaGUI.setLocationRelativeTo(null);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -59,6 +60,7 @@ public class GUIKontroler {
 	public static void napraviDodajKurs() {
 		DodajKursGUI kurs = new DodajKursGUI();
 		kurs.setVisible(true);
+		kurs.setLocationRelativeTo(null);
 	}
 
 	public static void ispisi(String poruka) {
@@ -68,10 +70,12 @@ public class GUIKontroler {
 	public static void napraviObrisiKurs() {
 		ObrisiKursGUI obrisi = new ObrisiKursGUI();
 		obrisi.setVisible(true);
+		obrisi.setLocationRelativeTo(null);
 	}
 
 	public static void napraviIzvrsiZamenu() {
 		IzvrsiZamenuGUI zamena = new IzvrsiZamenuGUI();
 		zamena.setVisible(true);
+		zamena.setLocationRelativeTo(null);
 	}
 }
